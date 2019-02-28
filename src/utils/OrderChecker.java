@@ -57,6 +57,7 @@ public class OrderChecker {
                 System.out.println("podaj ID");
                 int userInputId = Integer.valueOf(scan.nextInt());
                 System.out.println("Na jaki status chcesz zmienić zamówienie");
+                System.out.println("Masz do wyboru: prepared, on_transport, finished, canceled");
                 scan.nextLine();
                 OrderState newState = OrderState.valueOf(scan.nextLine().toUpperCase());
                 Order foundedOrder = findOrder(ordersFromFile, userInputId);
